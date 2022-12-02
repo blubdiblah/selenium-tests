@@ -1,5 +1,6 @@
 package com.mp.tests.configuration;
 
+import com.mp.tests.pages.PageGenerator;
 import com.mp.tests.util.PropertiesLoader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +21,8 @@ public abstract class SeleniumTest {
 
     protected WebDriver driver;
     protected WebDriverWait wait;
+
+    protected PageGenerator browser;
     protected Properties properties = PropertiesLoader.loadProperties();
 
 
@@ -28,6 +31,7 @@ public abstract class SeleniumTest {
 
         createDriver();
         createWaitDriver();
+        browser = new PageGenerator(driver);
     }
 
     @AfterEach
