@@ -37,4 +37,19 @@ public class LoginPage extends BasePage {
         click(loginButton);
         return PageFactory.initElements(driver, InventoryPage.class);
     }
+
+    public LoginPage typeUsername(String username) {
+        writeText(username, usernameInputField);
+        return this;
+    }
+
+    public LoginPage typePassword(String password) {
+        writeText(password, passwordInputField);
+        return this;
+    }
+
+    public InventoryPage clickLoginButton() {
+        click(loginButton);
+        return PageFactory.initElements(driver, InventoryPage.class);
+    }
 }

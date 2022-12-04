@@ -11,12 +11,12 @@ public class InventoryPage extends BasePage {
 
     public final String pageUrl = baseUrl + "inventory.html";
 
+    @FindBy(how = How.CLASS_NAME, using = "shopping_cart_link")
+    private WebElement openCartButton;
+
     public InventoryPage(WebDriver driver) {
         super(driver);
     }
-
-    @FindBy(how = How.CLASS_NAME, using = "shopping_cart_link")
-    private WebElement openCartButton;
 
     @Override
     protected BasePage goTo() {
