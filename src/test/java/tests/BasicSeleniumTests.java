@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Part1Tests extends SeleniumTest {
+public class BasicSeleniumTests extends SeleniumTest {
 
     @Test
     void webdriverTest() {

@@ -29,6 +29,7 @@ public abstract class SeleniumTest {
     @BeforeEach
     protected void setup() {
 
+        System.setProperty("webdriver.http.factory", "jdk-http-client");
         createDriver();
         createWaitDriver();
         browser = new PageGenerator(driver);
